@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> 제품과 버전 선택 </title>
+    <script type="text/javascript">
+          var arrayWindowVersion =new Array(); //윈도우 버전이 들어갈 공간을 만든다(배열)
+          var arrayOfficeVersion = new Array();//오피스 버전이 들어갈 공간을 만단다(배열)
+
+          arrayWindowVersion.push("인도우 2000");
+          arrayWindowVersion.push("인도우 xp");
+          arrayWindowVersion.push("인도우 비스타");
+
+          arrayOfficeVersion.push("오피스 xp");
+          arrayOfficeVersion.push("오피스 2003");
+          arrayOfficeVersion.push("오피스 2007");
+
+          function setVersion(){
+                var objProduct = document.getElementById("product");
+                var objVersion = document.getElementById("version");
+
+                var selectedValue = objProduct.options[objProduct.selectedIndex].value;
+
+                while (objVersion.options.lnegth>1) {
+                      objVersion.options[1] = null;
+
+                 }
+
+                 switch (selectedValue) {
+                   case "window":
+                          for (var i = 0; i < arrayWindowVersion.length; i++) {
+                                  objVersion.options[objVersion.options.length]=
+                                  new Option(arrayWindowVersion[i],arrayWindowVersion[i]);
+                          }
+                          break;
+                        case "Office":
+                          for (var i = 0; i < arrayOfficeVersion.length; i++) {
+                                   objVersion.options[objVersion.options.length=0;]=
+                                   new Option(arrayOfficeVersion[i],arrayOfficeVersion[i]);
+                                 }
+                                 break;
+                 }
+          }
+
+    </script>
+  </head>
+      <select id="product" onchange="setVersion()">
+            <option value="">제품을 선택하세요.</option>
+              <option value="window">원도우</option>
+                <option value="Office">오피스</option>
+      </select>
+
+      <select id="version">
+          <option value="Office">버전을 선택하세요.</option>
+      </select>
+  <body>
+
+  </body>
+</html>
