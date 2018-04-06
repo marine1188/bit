@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function changeColor(color){
+        //document.bgColor = color;// 도큐먼트 비지컬러 이용
+        document.body.style.backgroundImage = "url('해병.jpg')"; //이미지 넣기
+      }
+    </script>
+  </head>
+  <body>
+    <input type="radio" name ="colors" value="YELLOW" onclick="changeColor(this.value);" >노랑<!--방법 1-->
+    <br>
+    <input type="radio"name ="colors"  onclick="changeColor('GREEN');">녹색<!--방법 2-->
+    <br>
+  <input type="radio"name ="colors" onclick="changeColor('BLUE');" >파랑색
+    <br>
+    <input type="radio" name ="colors" onclick="changeColor('RED');" >빨강
+    <br>
+  <input type="radio"name ="colors" onclick="changeColor('BLUE');" >해병대
+  </body>
+</html><!--   -->

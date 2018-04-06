@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>선택하기</title>
+    <script type="text/javascript">
+      function likeGo() {
+        var objSubject = document.getElementsByName("subject")
+        for(var i = 0; i< objSubject.length; i++){
+          if(objSubject[i].checked){
+            alert(objSubject[i].value + "를 좋아 하는군요");
+            break;
+
+          }
+        }
+      }
+// 화면 체크
+    </script>
+  </head>
+  <body>
+    <h1>제일 조하하는 과목은?</h1>
+    <input type="radio" name="subject" value="HTML">HTML<br>
+    <input type="radio" name="subject" value="CSS">CSS<br>
+    <input type="radio" name="subject" value="자바스크리트">자바스크리트<br>
+    <input type="button" name="subject" value="답안지 제출" onclick="likeGo();"><br>
+
+
+
+  </body>
+</html>
