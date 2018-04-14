@@ -1,0 +1,1 @@
+<%response.sendRedirect("1class.jsp");%>
